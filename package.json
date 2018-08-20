@@ -1,0 +1,20 @@
+{
+  "name": "@shutter/examples",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Andy Wermke (https://github.com/andywer)",
+  "scripts": {
+    "postinstall": "link-parent-bin",
+    "build": "oao run-script --tree build",
+    "pretest": "yarn build",
+    "test": "oao run-script --parallel test"
+  },
+  "workspaces": [
+    "examples/*"
+  ],
+  "devDependencies": {
+    "link-parent-bin": "^0.2.0",
+    "oao": "^1.5.1"
+  }
+}
